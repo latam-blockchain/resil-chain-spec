@@ -1,5 +1,5 @@
 {
-  "name": "Testnet",
+  "name": "Resil Testnet v2",
   "engine": {
     "authorityRound": {
       "params": {
@@ -10,15 +10,21 @@
         "validators": {
           "multi": {
             "0": {
-              "list": ["0xa1a683985e46e867081f5e05e38007e502a5ef05",
-                       "0xa2307c9accca3f084a03908017cfe936e2cc6727",
-                       "0xa3fa79529d2d2d3da7df454dc0593d46a258b33d"]
+              "list": [
+                "0xa1a683985e46e867081f5e05e38007e502a5ef05"
+              ]
             },
-            "448000": {
-              "contract": "0x05a89b2588B3F0a34AC2352f86D824c5E45702ff"
+            "200": {
+              "contract": "0xE3f47669d1ecb984f24041b8cab13F9518Df4d82"
             }
           }
-        }
+        },
+        "blockRewardContractAddress": "0x46E6DB04A3B4b30AA18B3A05740F27D0297c6A3A",
+        "blockRewardContractTransition": 200,
+        "randomnessContractAddress": {
+          "200": "0x4b7DD2c0F83a5E661b26D56e12b4860731dc2785"
+        },
+        "posdaoTransition": 200
       }
     }
   },
@@ -27,22 +33,23 @@
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
     "networkID": "0xAC",
-
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
-
-    "eip145Transition": 100,
-    "eip1014Transition": 100,
-    "eip1052Transition": 100,
-    "eip1283Transition": 200,
-    "eip1344Transition": 200,
-    "eip1706Transition": 200,
-    "eip1884Transition": 200,
-    "eip2028Transition": 200,
-    "eip2929Transition": 300,
-    "eip2930Transition": 300
+    "eip145Transition": "0x0",
+    "eip1014Transition": "0x0",
+    "eip1052Transition": "0x0",
+    "eip1283Transition": "0x0",
+    "eip1344Transition": "0x0",
+    "eip1706Transition": "0x0",
+    "eip1884Transition": "0x0",
+    "eip2028Transition": "0x0",
+    "eip2929Transition": "0x0",
+    "eip2930Transition": "0x0",
+    "registrar": "0x204Abab33b0B734B1D0aef8074F1dB0F747D4F28",
+    "transactionPermissionContract": "0x46e0822C836a5C22d5c4E7F6e7F6a6b625403469",
+    "transactionPermissionContractTransition": 200
   },
   "genesis": {
     "seal": {
@@ -52,22 +59,14 @@
       }
     },
     "difficulty": "0x20000",
-    "gasLimit": "0x663BE0"
+    "gasLimit": "0x5F5E100"
   },
   "accounts": {
-    "0x0000000000000000000000000000000000000005": {
+    "0000000000000000000000000000000000000005": {
       "builtin": {
         "name": "modexp",
         "pricing": {
           "0": {
-            "price": {
-              "modexp": {
-                "divisor": 20
-              }
-            }
-          },
-          "300": {
-            "info": "EIP-2565: ModExp Gas Cost. Berlin hardfork (May 24, 2021, ~10:00 am UTC)",
             "price": {
               "modexp2565": {}
             }
@@ -75,19 +74,11 @@
         }
       }
     },
-    "0x0000000000000000000000000000000000000006": {
+    "0000000000000000000000000000000000000006": {
       "builtin": {
         "name": "alt_bn128_add",
         "pricing": {
           "0": {
-            "price": {
-              "alt_bn128_const_operations": {
-                "price": 500
-              }
-            }
-          },
-          "200": {
-            "info": "Istanbul HF",
             "price": {
               "alt_bn128_const_operations": {
                 "price": 150
@@ -97,19 +88,11 @@
         }
       }
     },
-    "0x0000000000000000000000000000000000000007": {
+    "0000000000000000000000000000000000000007": {
       "builtin": {
         "name": "alt_bn128_mul",
         "pricing": {
           "0": {
-            "price": {
-              "alt_bn128_const_operations": {
-                "price": 40000
-              }
-            }
-          },
-          "200": {
-            "info": "Istanbul HF",
             "price": {
               "alt_bn128_const_operations": {
                 "price": 6000
@@ -119,20 +102,11 @@
         }
       }
     },
-    "0x0000000000000000000000000000000000000008": {
+    "0000000000000000000000000000000000000008": {
       "builtin": {
         "name": "alt_bn128_pairing",
         "pricing": {
           "0": {
-            "price": {
-              "alt_bn128_pairing": {
-                "base": 100000,
-                "pair": 80000
-              }
-            }
-          },
-          "200": {
-            "info": "Istanbul HF",
             "price": {
               "alt_bn128_pairing": {
                 "base": 45000,
@@ -147,8 +121,7 @@
       "builtin": {
         "name": "blake2_f",
         "pricing": {
-          "200": {
-            "info": "Istanbul HF",
+          "0": {
             "price": {
               "blake2_f": {
                 "gas_per_round": 1
