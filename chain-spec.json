@@ -1,5 +1,5 @@
 {
-  "name": "Resil Testnet v2",
+  "name": "Resil-Testnet3",
   "engine": {
     "authorityRound": {
       "params": {
@@ -15,14 +15,14 @@
               ]
             },
             "200": {
-              "contract": "0xE3f47669d1ecb984f24041b8cab13F9518Df4d82"
+              "contract": "0x9501EaB2a4825F03A7855e7d84F31Fb063070554"
             }
           }
         },
-        "blockRewardContractAddress": "0x46E6DB04A3B4b30AA18B3A05740F27D0297c6A3A",
+        "blockRewardContractAddress": "0xba32c928328Ae69780b0fBA5bD795843B52c7172",
         "blockRewardContractTransition": 200,
         "randomnessContractAddress": {
-          "200": "0x4b7DD2c0F83a5E661b26D56e12b4860731dc2785"
+          "200": "0xB49a42fE04439b8A0Ca389372C74c8B6597552A0"
         },
         "posdaoTransition": 200
       }
@@ -47,8 +47,8 @@
     "eip2028Transition": "0x0",
     "eip2929Transition": "0x0",
     "eip2930Transition": "0x0",
-    "registrar": "0x204Abab33b0B734B1D0aef8074F1dB0F747D4F28",
-    "transactionPermissionContract": "0x46e0822C836a5C22d5c4E7F6e7F6a6b625403469",
+    "registrar": "0xA32Efca0FE8159a2feDaA6e9Bb181699316e7Fa2",
+    "transactionPermissionContract": "0x5d9A5aA0849b4A74741CaDE6cB463caE6e976d0A",
     "transactionPermissionContractTransition": 200
   },
   "genesis": {
@@ -195,7 +195,7 @@
         }
       }
     },
-    "0xa4aebcd5430b7b59ddd2d453ebf9f2102a7f1c79": {
+    "0xa06f63b409c05957fb070d9f2761d62fceda7e61": {
       "balance": "10000000000000000000000"
     }
   }
